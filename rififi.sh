@@ -9,11 +9,14 @@ Where:
   -h      help
   -d      dry run
   -n      do not show symbols
+
+Example:
+  rofi -show powermenu -modi powermenu:"./rififi.sh -f ./rififi-power-menu.conf"
 EOF
 }
 
 CONFIGURATION_FILE=""
-DRY_RUN="true"
+DRY_RUN="false"
 SHOW_SYMBOLS="true"
 
 while getopts "f:hdn" OPT; do
@@ -137,10 +140,10 @@ function execute_action_for_menu_item_id(){
 	fi
 	MENU_ITEM_ACTION="${MENU_ITEM_ACTION_ARRAY[${MENU_ITEM_ID}]}"
 	if ${DRY_RUN}; then
-		printf "Executing MENU_ITEM_ACTION[%s]\n" "${MENU_ITEM_ACTION}" >&2
+		printf "Executing MENU_ITEM_ID[%s] MENU_ITEM_ACTION[%s] DRY_RUN[%s]\n" "${MENU_ITEM_ID}" "${MENU_ITEM_ACTION}" "${DRY_RUN}" >&2
 	else
-		printf "Executing MENU_ITEM_ACTION[%s]\n" "${MENU_ITEM_ACTION}" >&2
-		#${MENU_ITEM_ACTION_ARRAY[${MENU_ITEM_ID}]}
+		printf "Executing MENU_ITEM_ID[%s] MENU_ITEM_ACTION[%s] DRY_RUN[%s]\n" "${MENU_ITEM_ID}" "${MENU_ITEM_ACTION}" "${DRY_RUN}" >&2
+		${MENU_ITEM_ACTION_ARRAY[${MENU_ITEM_ID}]}
 	fi
 }
 
