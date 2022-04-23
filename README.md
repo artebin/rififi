@@ -1,6 +1,6 @@
 # rififi
 
-Simple script to easily create rofi menus.
+Simple script to easily create rofi menus based on a configuration file.
 
 ## Usage
 
@@ -19,7 +19,7 @@ Example:
 
 ## Configuration file
 
-All menu entries are declared and configured in CONFIGURATION_FILE with arrays/associative arrays.
+All menu entries are declared and configured in CONFIGURATION_FILE with bash arrays or associative arrays.
 Example:
 
 
