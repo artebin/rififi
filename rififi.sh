@@ -2,7 +2,7 @@
 
 function print_usage(){
 	cat << EOF
-Usage: ${0} -f <CONFIGURATION_FILE> [-hdn] [SELECTED_ROFI_MENU_ENTRY]
+Usage: ./rififi.sh -f <CONFIGURATION_FILE> [-hdn] [SELECTED_ROFI_MENU_ENTRY]
 
 Where:
   -f      path to CONFIGURATION_FILE
