@@ -69,12 +69,14 @@ MENU_ITEM_SYMBOL_ARRAY[shutdown]=""
 MENU_ITEM_ACTION_ARRAY[lockscreen]="dm-tool lock"
 MENU_ITEM_ACTION_ARRAY[switchuser]="dm-tool switch-to-greeter"
 MENU_ITEM_ACTION_ARRAY[logout]="loginctl terminate-session ${XDG_SESSION_ID-}"
-MENU_ITEM_ACTION_ARRAY[suspend]="xset dpms force off;systemctl suspend"
-MENU_ITEM_ACTION_ARRAY[hibernate]="xset dpms force off;systemctl hibernate"
+MENU_ITEM_ACTION_ARRAY[suspend]="systemctl suspend"
+MENU_ITEM_ACTION_ARRAY[hibernate]="systemctl hibernate"
 MENU_ITEM_ACTION_ARRAY[reboot]="systemctl reboot"
 MENU_ITEM_ACTION_ARRAY[shutdown]="systemctl poweroff"
 ~~~
 
 ## Power menu
+
+Tip: you can also start `xss-lock -- dm-tool lock &` via your `.xsessionrc` to lock the session at suspend and hibernate.
 
 ![](./screenshots/rififi-power-menu.png)
