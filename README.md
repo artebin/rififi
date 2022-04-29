@@ -80,3 +80,7 @@ MENU_ITEM_ACTION_ARRAY[shutdown]="systemctl poweroff"
 Tip: you can also start `xss-lock -- dm-tool lock &` via your `.xsessionrc` to lock the session at suspend and hibernate.
 
 ![](./screenshots/rififi-power-menu.png)
+
+## Remmina connections
+
+![](./screenshots/rififi-remmina.png)
