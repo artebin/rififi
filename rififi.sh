@@ -143,7 +143,7 @@ function execute_action_for_menu_item_id(){
 		printf "Executing MENU_ITEM_ID[%s] MENU_ITEM_ACTION[%s] DRY_RUN[%s]\n" "${MENU_ITEM_ID}" "${MENU_ITEM_ACTION}" "${DRY_RUN}" >&2
 	else
 		printf "Executing MENU_ITEM_ID[%s] MENU_ITEM_ACTION[%s] DRY_RUN[%s]\n" "${MENU_ITEM_ID}" "${MENU_ITEM_ACTION}" "${DRY_RUN}" >&2
-		eval "${MENU_ITEM_ACTION_ARRAY[${MENU_ITEM_ID}]}"
+		nohup ${MENU_ITEM_ACTION_ARRAY[${MENU_ITEM_ID}]} >/dev/null 2>/dev/null </dev/null &
 	fi
 }
 
