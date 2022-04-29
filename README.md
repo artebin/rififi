@@ -81,6 +81,8 @@ Tip: you can also start `xss-lock -- dm-tool lock &` via your `.xsessionrc` to l
 
 ![](./screenshots/rififi-power-menu.png)
 
-## Remmina connections
+## Remmina connection
+
+The script rewrites an index of the remmina connection files from `${HOME}/.local/share/remmina` if a change is detected in the files. It is written to be fast and not delay the appearance of the rofi menu if nothing changed in the remmina connnection files.
 
 ![](./screenshots/rififi-remmina.png)
