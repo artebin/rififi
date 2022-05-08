@@ -77,7 +77,7 @@ MENU_ITEM_ACTION_ARRAY[shutdown]="systemctl poweroff"
 
 ## Power menu
 
-Tip: you can also start `xss-lock -- dm-tool lock &` via your `.xsessionrc` to lock the session at suspend and hibernate.
+Tip: you can also start `xss-lock -- i3lock -n &` via your `.xsessionrc` to lock the session at suspend and hibernate.
 
 ![](./screenshots/rififi-power-menu.png)
 
