@@ -9,13 +9,13 @@ Features:
 ## Usage
 
 ~~~
-Usage: ./rififi.sh -f <CONFIGURATION_FILE> [-hdn] [SELECTED_ROFI_MENU_ENTRY]
+Usage: rififi.sh [-h] -f <CONFIGURATION_FILE> [-dn] [SELECTED_ROFI_MENU_ENTRY]
 
 Where:
-  -f      path to CONFIGURATION_FILE
-  -h      help
-  -d      dry run
-  -n      do not show symbols
+  -h      Help.
+  -f      Path to CONFIGURATION_FILE.
+  -d      Dry run.
+  -n      Do not show symbols.
 
 Example:
   rofi -show powermenu -modi powermenu:"./rififi.sh -f ./rififi-power-menu.conf"
@@ -32,7 +32,7 @@ Example:
 
 MENU_TITLE="Power menu"
 
-MENU_ITEM_ID_ALL_ARRAY=( lockscreen switchuser logout suspend hibernate reboot shutdown )
+MENU_ITEM_ID_ALL_ARRAY=( lockscreen hibernate shutdown logout reboot suspend switchuser )
 
 MENU_ITEM_VISIBLE_ARRAY[lockscreen]="true"
 MENU_ITEM_VISIBLE_ARRAY[switchuser]="false"
@@ -66,7 +66,7 @@ MENU_ITEM_SYMBOL_ARRAY[hibernate]=""
 MENU_ITEM_SYMBOL_ARRAY[reboot]=""
 MENU_ITEM_SYMBOL_ARRAY[shutdown]=""
 
-MENU_ITEM_ACTION_ARRAY[lockscreen]="dm-tool lock"
+MENU_ITEM_ACTION_ARRAY[lockscreen]="i3lock -n"
 MENU_ITEM_ACTION_ARRAY[switchuser]="dm-tool switch-to-greeter"
 MENU_ITEM_ACTION_ARRAY[logout]="loginctl terminate-session ${XDG_SESSION_ID-}"
 MENU_ITEM_ACTION_ARRAY[suspend]="systemctl suspend"
