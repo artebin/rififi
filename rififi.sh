@@ -2,13 +2,13 @@
 
 function print_usage(){
 	cat << EOF
-Usage: ./rififi.sh -f <CONFIGURATION_FILE> [-hdn] [SELECTED_ROFI_MENU_ENTRY]
+Usage: ${0} [-h] -f <CONFIGURATION_FILE> [-dn] [SELECTED_ROFI_MENU_ENTRY]
 
 Where:
-  -f      path to CONFIGURATION_FILE
-  -h      help
-  -d      dry run
-  -n      do not show symbols
+  -h      Help.
+  -f      Path to CONFIGURATION_FILE.
+  -d      Dry run.
+  -n      Do not show symbols.
 
 Example:
   rofi -show powermenu -modi powermenu:"./rififi.sh -f ./rififi-power-menu.conf"
@@ -21,12 +21,12 @@ SHOW_SYMBOLS="true"
 
 while getopts "f:hdn" OPT; do
 	case "${OPT}" in
-		f)
-			CONFIGURATION_FILE="${OPTARG}"
-			;;
 		h)
 			print_usage
 			exit 0
+			;;
+		f)
+			CONFIGURATION_FILE="${OPTARG}"
 			;;
 		d)
 			DRY_RUN="true"
