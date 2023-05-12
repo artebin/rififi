@@ -5,7 +5,7 @@ Simple script to easily create rofi menus based on a configuration file.
 Features:
   - one action is associated to each menu entry
   - confirmation can be asked before executing the action
-  - shortcut can be registered in `~/.config/sxhkd/sxhkdrc`:
+  - hot key can be registered with sxhkd to open the rofi menu by editing `~/.config/sxhkd/sxhkdrc`:
 
         super + r
         rofi -show run -modi run,window,remmina:"${HOME}/.config/rofi/rififi.sh -f ${HOME}/.config/rofi/rififi-remmina.conf"
