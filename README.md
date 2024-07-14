@@ -5,7 +5,7 @@ Simple script to easily create rofi menus based on a configuration file.
 Features:
   - one action is associated to each menu entry
   - confirmation can be asked before executing the action
-  - hot key can be registered with sxhkd to open the rofi menu by editing `~/.config/sxhkd/sxhkdrc`:
+  - hot key can be registered with sxhkd to open the rofi menu by editing `~/.config/sxhkd/sxhkdrc` like powermenu below:
 
         super + r
         rofi -show run -modi run,powermenu:"${HOME}/.config/rofi/rififi.sh -f ${HOME}/.config/rofi/rififi-power-menu.conf"
