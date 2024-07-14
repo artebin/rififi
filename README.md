@@ -8,7 +8,7 @@ Features:
   - hot key can be registered with sxhkd to open the rofi menu by editing `~/.config/sxhkd/sxhkdrc`:
 
         super + r
-        rofi -show run -modi run,window,remmina:"${HOME}/.config/rofi/rififi.sh -f ${HOME}/.config/rofi/rififi-remmina.conf"
+        rofi -show run -modi run,powermenu:"${HOME}/.config/rofi/rififi.sh -f ${HOME}/.config/rofi/rififi-power-menu.conf"
 
 ## Usage
 
@@ -82,9 +82,3 @@ MENU_ITEM_ACTION_ARRAY[shutdown]="systemctl poweroff"
 ## Power menu
 
 ![](./screenshots/rififi-power-menu.png)
-
-## Remmina connection
-
-The script rewrites an index of the remmina connection files from `${HOME}/.local/share/remmina` if a change is detected in the files. It is written to be fast and not delay the appearance of the rofi menu if nothing changed connnection parameters.
-
-![](./screenshots/rififi-remmina.png)
