@@ -22,7 +22,7 @@ Where:
   -n      Do not show symbols.
 
 Example:
-  rofi -show powermenu -modi powermenu:"./rififi.sh -f ./rififi-power-menu.conf"
+  rofi -show powermenu -modi powermenu:"${HOME}/.config/rofi/rififi.sh -f ${HOME}/.config/rofi/rififi-power-menu.conf"
 ~~~
 
 ## Configuration file
