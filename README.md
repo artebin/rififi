@@ -5,7 +5,7 @@ Simple script to easily create rofi menus based on a configuration file.
 Features:
   - one action is associated to each menu entry
   - confirmation can be asked before executing the action
-  - hot key can be registered with sxhkd to open the rofi menu by editing `~/.config/sxhkd/sxhkdrc` like powermenu below:
+  - hot key can be registered with sxhkd to open the rofi menu by editing `~/.config/sxhkd/sxhkdrc` like the power menu below:
 
         super + r
         rofi -show run -modi run,powermenu:"${HOME}/.config/rofi/rififi.sh -f ${HOME}/.config/rofi/rififi-power-menu.conf"
@@ -29,7 +29,7 @@ Example:
 
 All menu entries are declared and configured with the bash script CONFIGURATION_FILE.
 
-Example:
+Example below for a power menu:
 
 ~~~
 #!/usr/bin/env bash
@@ -70,7 +70,7 @@ MENU_ITEM_SYMBOL_ARRAY[hibernate]=""
 MENU_ITEM_SYMBOL_ARRAY[reboot]=""
 MENU_ITEM_SYMBOL_ARRAY[shutdown]=""
 
-MENU_ITEM_ACTION_ARRAY[lockscreen]="i3lock -n"
+MENU_ITEM_ACTION_ARRAY[lockscreen]="dm-tool switch-to-greeter"
 MENU_ITEM_ACTION_ARRAY[switchuser]="dm-tool switch-to-greeter"
 MENU_ITEM_ACTION_ARRAY[logout]="loginctl terminate-session ${XDG_SESSION_ID-}"
 MENU_ITEM_ACTION_ARRAY[suspend]="systemctl suspend"
@@ -78,7 +78,5 @@ MENU_ITEM_ACTION_ARRAY[hibernate]="systemctl hibernate"
 MENU_ITEM_ACTION_ARRAY[reboot]="systemctl reboot"
 MENU_ITEM_ACTION_ARRAY[shutdown]="systemctl poweroff"
 ~~~
-
-## Power menu
 
 ![](./screenshots/rififi-power-menu.png)
